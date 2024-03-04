@@ -639,7 +639,7 @@ function generate() {
         let randomIndex = Math.floor(Math.random() * characters.length);
         randomString += characters.charAt(randomIndex);
     }
-    document.querySelector('#id24').value = randomString;
+    document.querySelector('#id').value = randomString;
 }
 
 //364.20
