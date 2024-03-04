@@ -448,7 +448,7 @@ id5.addEventListener('blur', function(){
 //364.4
 let id = document.querySelector('#id');
 let txt = document.querySelector('#txt');
-id6.addEventListener('blur', function(){
+id.addEventListener('blur', function(){
     let number = id.value.split(",");
     let sum = 0;
     for (let i = 0; i < number.length; i++) {
@@ -476,10 +476,10 @@ let id = document.querySelector('#id');
 id.addEventListener("blur", function() {
     let znach1 = id11.value;
     let words = znach1.split(" ");
-    let itog2 = words.map(function(word) {
+    let itog = words.map(function(word) {
         return word.charAt(0).toUpperCase() + word.slice(1);
     }).join(" ");
-    id.value = itog2;
+    id.value = itog;
 });
 
 //364.7
@@ -521,7 +521,7 @@ button.addEventListener("click", function() {
 //364.10
 let id = document.querySelector('#id');
 let itog = document.querySelector('#itog');
-id15.addEventListener("blur", function() {
+id.addEventListener("blur", function() {
     let number = id.value;
     if (number.includes("3")) {
         itog.textContent = "Число содержит цифру 3";
@@ -532,17 +532,17 @@ id15.addEventListener("blur", function() {
 
 //364.11
 let txt = document.getElementsByTagName("p");
-let button3 = document.querySelector('#button3');
-button3.addEventListener("click", function() {
+let button = document.querySelector('#button');
+button.addEventListener("click", function() {
     for (let i = 0; i < txt.length; i++) {
-        txt6[i].textContent += " " + (i + 1);
+        txt[i].textContent += " " + (i + 1);
     }
 });
 
 //364.12
 let links = document.getElementsByTagName("a");
-let button5 = document.querySelector('#button5');
-button5.addEventListener("click", function() {
+let button = document.querySelector('#button');
+button.addEventListener("click", function() {
     for (let i = 0; i < links.length; i++) {
         links[i].textContent += " (" + links[i].href + ")";
     }
@@ -550,8 +550,8 @@ button5.addEventListener("click", function() {
 
 //364.13
 let links = document.getElementsByTagName("a");
-let button6 = document.querySelector('#button6');
-button6.addEventListener("click", function() {
+let button = document.querySelector('#button');
+button.addEventListener("click", function() {
     for (let i = 0; i < links.length; i++) {
         if (links1[i].href.startsWith("http://")) {
             links1[i].textContent += " →";
@@ -633,7 +633,7 @@ for (let i = 0; i < divs.length; i++) {
 
 //364.19
 function generate() {
-    let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    let characters = "ABCDEFGHIJYZabcdefghijkl";
     let randomString = "";
     for (let i = 0; i < 8; i++) {
         let randomIndex = Math.floor(Math.random() * characters.length);
